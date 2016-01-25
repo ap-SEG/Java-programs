@@ -1,0 +1,27 @@
+public class average
+{
+    public static void main (String args[])
+    {
+ new average ();
+    }
+
+
+    public average ()
+    {
+ System.out.println ("   _ _  _   _    __   _ __   _ _    __     __  ");
+ System.out.println (" /'_` )( ) ( ) /'__`\\( '__)/'_` ) /'_ `\\ /'__`\\");
+ System.out.println ("( (_| || \\_/ |(  ___/| |  ( (_| |( (_) |(  ___/");
+ System.out.println ("`\\__,_)`\\___/'`\\____)(_)  `\\__,_)`\\ |`\\____)");
+ System.out.println ("                                  ( )_) |       ");
+ System.out.println ("                                  \\___/'");
+ System.out.println ("Enter the percentage earned on each test. ");
+ int student1 = IBIO.inputInt ("What is student #1's mark? ");
+ int student2 = IBIO.inputInt ("What is student #2's mark? ");
+ int student3 = IBIO.inputInt ("What is student #3's mark? ");
+ int student4 = IBIO.inputInt ("What is student #4's mark? ");
+ int student5 = IBIO.inputInt ("What is student #5's mark? ");
+ int student6 = IBIO.inputInt ("What is student #6's mark? ");
+ System.out.println ("There are 6 students in the class");
+ System.out.println ("The average mark was " + ((student1 + student2 + student3 + student4 + student5 + student6) / 6) + "%");
+    }
+}
