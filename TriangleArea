@@ -1,0 +1,18 @@
+public class TriangleArea
+{
+  public static void main (String args[])
+  {
+    new TriangleArea ();
+  }
+  
+  
+  public TriangleArea ()
+  {
+    double base = 52.7;
+    double height = 14.8;
+    String area = "The area is " + 0.5*base*height;
+    System.out.println ("Triangle Area Program");
+    System.out.println ("The base is " + base + "\n The height is " + height + " \n \t Triangle Area Program \n" + area);
+    
+  }
+}
