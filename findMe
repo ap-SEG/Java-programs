@@ -1,0 +1,209 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.Applet;
+
+public class findMe extends Applet implements ActionListener
+{
+    Panel p_card;
+    Panel card1, card2, card3, card4, card5, card6, card8;
+    CardLayout cdLayout = new CardLayout ();
+
+    public void init ()
+    {
+ p_card = new Panel ();
+ p_card.setLayout (cdLayout);
+ screen1 ();
+ screen2 ();
+ screen3 ();
+ screen4 ();
+ screen5 ();
+ screen8 ();
+ resize (150, 100);
+ setLayout (new BorderLayout ());
+ add ("Center", p_card);
+
+    }
+
+
+    public void screen1 ()
+    {
+ card1 = new Panel ();
+ card1.setBackground (Color.white);
+
+ JLabel title = new JLabel ("Find Me!");
+ title.setFont (new Font ("Cambria (Headings)", Font.BOLD, 45));
+ title.setForeground (Color.red);
+ JLabel title1 = new JLabel ("You are in the main hall");
+ title1.setFont (new Font ("Cambria (Headings)", Font.BOLD, 15));
+ title1.setForeground (Color.blue);
+ JLabel title2 = new JLabel ("Look throughout my house to find me.");
+
+ JButton billr = new JButton ("Billard Room");
+ billr.addActionListener (this);
+ billr.setActionCommand ("2");
+
+ JButton dr = new JButton ("Dining Room");
+ dr.addActionListener (this);
+ dr.setActionCommand ("3");
+
+ JButton c = new JButton ("Conservatory");
+ c.addActionListener (this);
+ c.setActionCommand ("4");
+
+ JButton ballr = new JButton ("Ballroom");
+ ballr.addActionListener (this);
+ ballr.setActionCommand ("5");
+
+ JLabel pic2 = new JLabel (createImageIcon ("mainhall.jpg"));
+
+ Panel p = new Panel (new GridLayout (5, 1));
+
+ card1.add (title);
+ card1.add (pic2);
+ card1.add (title1);
+ card1.add (title2);
+ card1.add (billr);
+ card1.add (dr);
+ card1.add (c);
+ card1.add (ballr);
+ add (p);
+ p_card.add ("1", card1);
+    }
+
+
+    public void screen2 ()
+    {
+ card2 = new Panel ();
+ card2.setBackground (Color.white);
+ JLabel pic1 = new JLabel (createImageIcon ("billardroom1.jpg"));
+ JLabel title = new JLabel ("Billard Room");
+ title.setFont (new Font ("Cambria (Headings)", Font.BOLD, 45));
+ title.setForeground (Color.red);
+ JLabel title2 = new JLabel ("I am not here! Keep Looking.");
+ JButton pic2 = new JButton ("Back to Hall", createImageIcon ("mainhall.jpg"));
+ pic2.setActionCommand ("1");
+ pic2.addActionListener (this);
+ card2.add (pic1);
+ card2.add (title);
+ card2.add (title2);
+ card2.add (pic2);
+ p_card.add ("2", card2);
+    }
+
+
+    public void screen3 ()
+    {
+ card3 = new Panel ();
+ card3.setBackground (Color.white);
+ JLabel pic1 = new JLabel (createImageIcon ("diningroom.jpg"));
+ JLabel title = new JLabel ("Dining Room");
+ title.setFont (new Font ("Cambria (Headings)", Font.BOLD, 45));
+ title.setForeground (Color.red);
+ JLabel title2 = new JLabel ("I am not here! Keep Looking.");
+ JButton pic2 = new JButton ("Back to Hall", createImageIcon ("mainhall.jpg"));
+ pic2.setActionCommand ("1");
+ pic2.addActionListener (this);
+
+ JButton title3 = new JButton ("Bedroom", createImageIcon ("bedroom.jpg"));
+ title3.setActionCommand ("8");
+ title3.addActionListener (this);
+
+ card3.add (pic1);
+ card3.add (title);
+ card3.add (title2);
+ card3.add (title3);
+ card3.add (pic2);
+ p_card.add ("3", card3);
+    }
+
+
+    public void screen4 ()
+    {
+ card4 = new Panel ();
+ card4.setBackground (Color.white);
+ JLabel pic1 = new JLabel (createImageIcon ("conservatory.jpg"));
+ JLabel title = new JLabel ("Conservatory");
+ title.setFont (new Font ("Cambria (Headings)", Font.BOLD, 45));
+ title.setForeground (Color.red);
+ JLabel title2 = new JLabel ("I am not here! Keep Looking.");
+ JButton pic2 = new JButton ("Back to Hall", createImageIcon ("mainhall.jpg"));
+ pic2.setActionCommand ("1");
+ pic2.addActionListener (this);
+ card4.add (pic1);
+ card4.add (title);
+ card4.add (title2);
+ card4.add (pic2);
+ p_card.add ("4", card4);
+    }
+
+
+    public void screen5 ()
+    {
+ card5 = new Panel ();
+ card5.setBackground (Color.white);
+ JLabel pic1 = new JLabel (createImageIcon ("ballroom.jpg"));
+ JLabel title = new JLabel ("Ballroom");
+ title.setFont (new Font ("Cambria (Headings)", Font.BOLD, 45));
+ title.setForeground (Color.red);
+ JLabel title2 = new JLabel ("I am not here! Keep Looking.");
+ JButton pic2 = new JButton ("Back to Hall", createImageIcon ("mainhall.jpg"));
+ pic2.setActionCommand ("1");
+ pic2.addActionListener (this);
+ card5.add (pic1);
+ card5.add (title);
+ card5.add (title2);
+ card5.add (pic2);
+ p_card.add ("5", card5);
+    }
+
+
+    public void screen8 ()
+    {
+ card8 = new Panel ();
+ card8.setBackground (Color.white);
+ JLabel pic1 = new JLabel (createImageIcon ("bedroom.jpg"));
+ JLabel title = new JLabel ("Bedroom");
+ title.setFont (new Font ("Cambria (Headings)", Font.BOLD, 45));
+ title.setForeground (Color.red);
+ JLabel title2 = new JLabel ("YAY YOU FOUND ME!!!");
+ card8.add (pic1);
+ card8.add (title);
+ card8.add (title2);
+ p_card.add ("8", card8);
+    }
+
+
+
+    public void actionPerformed (ActionEvent e)
+    {
+ if (e.getActionCommand ().equals ("1"))
+     cdLayout.show (p_card, "1");
+ else if (e.getActionCommand ().equals ("2"))
+     cdLayout.show (p_card, "2");
+ else if (e.getActionCommand ().equals ("3"))
+     cdLayout.show (p_card, "3");
+ else if (e.getActionCommand ().equals ("8"))
+     cdLayout.show (p_card, "8");
+ else if (e.getActionCommand ().equals ("4"))
+     cdLayout.show (p_card, "4");
+ else if (e.getActionCommand ().equals ("5"))
+     cdLayout.show (p_card, "5");
+ else if (e.getActionCommand ().equals ("6"))
+     cdLayout.show (p_card, "6");
+    }
+
+
+    protected static ImageIcon createImageIcon (String path)
+    {
+ java.net.URL imgURL = findMe.class.getResource (path);
+ if (imgURL != null)
+     return new ImageIcon (imgURL);
+ else
+ {
+     System.err.println ("Couldn't find file: " + path);
+     return null;
+ }
+    }
+}
+
