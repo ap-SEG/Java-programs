@@ -1,0 +1,20 @@
+public class leBonBon
+{
+    public static void main (String args[])
+    {
+ new leBonBon ();
+    }
+
+    public leBonBon ()
+    {
+ System.out.println ("C A R A M E L S.");
+ int caram = IBIO.inputInt ("How many caramels? ");
+ if (caram < 1)
+ {
+     System.out.println ("Won't you try one?");
+     caram = IBIO.inputInt ("Really, how many? ");
+ }
+ double total = caram * .75;
+ System.out.println ("Your total is $" + total);
+    }
+}
