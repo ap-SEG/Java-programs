@@ -1,0 +1,21 @@
+public class employ
+{
+    public static void main (String args[])
+    {
+ new employ ();
+    }
+
+
+    public employ ()
+    {
+ int y = IBIO.inputInt ("Enter the number of employees: ");
+ int x = 1;
+ while (y >= x)
+ {
+     int hours = IBIO.inputInt ("\nHours worked by employee #" + x + ": ");
+     int wage = IBIO.inputInt ("Employee #" + x + "'s wage: ");
+     System.out.println ("\nWages: " + hours * wage);
+     x++;
+ }
+    }
+}
