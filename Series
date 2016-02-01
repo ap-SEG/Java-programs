@@ -1,0 +1,142 @@
+public class Series
+{
+    public static void main (String args[])
+    {
+      
+    System.out.println (" Group A Counting ");
+    
+    for (int a = 0 ; a<=12 ; a++)
+    {  
+ System.out.print (a + " ");
+    }
+    System.out.println ("");
+    
+    for (int b = 1 ; b<=19 ; b++)
+    {
+ System.out.print (b + " ");
+    }
+    System.out.println ("");
+    
+    for (int c = 12 ; c <= 22 ; c++)
+    {
+ System.out.print (c + " ");
+    }   
+    System.out.println ("");
+    
+    for (int d = 101 ; d <= 115 ; d++)
+    {
+ System.out.print (d + " ");
+    }
+     System.out.println ("\n"); 
+    
+    System.out.println (" Group B Backwords ");
+    for (int e = 12 ; e >= 0 ; e--)
+    {
+ System.out.print (e + " ");
+    }
+    System.out.println ("");
+    
+    for (int f = 20 ; f>=1 ; f--)
+    {
+ System.out.print (f + " ");
+    }
+    System.out.println ("");
+    
+    for (int g = 22 ; g>=12 ; g--)
+    {
+ System.out.print (g + " ");
+    } 
+    System.out.println ("");
+    
+    for (int h = 115 ; h>=101 ; h--)
+    {
+ System.out.print (h + " ");
+    }
+     System.out.println ("\n");    
+  
+    System.out.println (" Group C Skip Counting ");
+    for (int i = 0 ; i<=18 ; i+=2)
+    {
+ System.out.print (i + " ");
+    }
+    System.out.println ("");
+    
+    for (int j = 1 ; j<=19 ; j+=2)
+    {
+ System.out.print (j + " ");
+    }
+    System.out.println ("");
+     
+    for (int k = 0 ; k<=30 ; k+=3)
+    {
+ System.out.print (k + " ");
+    }
+    System.out.println ("");
+    
+    for (int l = 0 ; l<=40 ; l+=4)
+    {
+ System.out.print (l + " ");
+    }
+    System.out.println ("");
+    
+    for (double m = 1 ; m<=5.5 ; m+=0.5)
+    {
+ System.out.print (m + " ");
+    }
+     System.out.println ("\n");
+    
+    
+    System.out.println (" Group D One thing, Repeated ");
+    for (int n = 0 ; n<= 12 ; n++)
+    {
+ System.out.print ("* ");
+    }
+     System.out.println ("");
+     
+    for (int o = 0 ; o<=12 ; o++)
+    {
+ System.out.print ("2 ");
+    }
+    System.out.println ("");
+  
+     for (int p = 0 ; p<=12 ; p++)
+     {
+ System.out.print ("1 0 ");
+     }
+     System.out.println ("");
+     
+     for (int q = 0 ; q<=12 ; q++)
+    {
+ System.out.print ("la");
+    }
+    System.out.println ("\n");
+    
+    System.out.println ("Group E Powers - Multiply and Divide");
+    for (int a = 0 ; a <= 12 ; a++)
+    {
+ System.out.print ((a * a) + " ");
+    }
+    System.out.println ("");
+    for (int a = 0 ; a <= 12 ; a++)
+    {
+ System.out.print ((a * a * a) + " ");
+    }
+    System.out.println ("");
+    for (int c = 1 ; c <= 2048 ; c *= 2)
+    {
+ System.out.print (c + " ");
+    }
+    System.out.println ("");
+    for (int c = 1 ; c <= 59049 ; c *= 3)
+    {
+ System.out.print (c + " ");
+    }
+    System.out.println ("");
+    for (double c = 1000 ; c >= 0.01 ; c *= 0.1)
+    {
+ System.out.print (c + " ");
+    }
+    System.out.println ("\n"); 
+
+    }
+}
