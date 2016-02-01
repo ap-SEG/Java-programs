@@ -1,0 +1,48 @@
+public class daisy
+{
+    public static void main (String args[])
+    {
+ new daisy ();
+    }
+
+
+    public daisy ()
+    {
+
+ int num = (int) (Math.random () * 10) + 15;
+ for (int num1 = 1 ; num1 < num ; num1++)
+ {
+     if (num1 % 2 == 0)
+     {
+  System.out.println ("He loves me");
+     }
+     else
+     {
+  System.out.println ("He loves me not");
+     }
+     try
+     {
+  Thread.sleep (100);
+     }
+     catch (InterruptedException m)
+     {
+  ;
+     }
+     
+  }   
+
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
