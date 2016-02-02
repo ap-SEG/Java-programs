@@ -1,0 +1,62 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.Applet;
+
+public class dice extends Applet implements ActionListener
+{
+    JLabel picture;
+    public void init ()
+    {
+ JLabel rolldice = new JLabel ("Click to roll the dice.");
+ rolldice.setFont (new Font ("Arial", Font.ITALIC, 30));
+ rolldice.setForeground (Color.pink);
+ picture = new JLabel (createImageIcon ("maindice.png"));
+ JButton roll = new JButton ("ROLL!");
+ roll.setBackground (Color.blue);
+ roll.setForeground (Color.red);
+ roll.addActionListener (this);
+ roll.setActionCommand ("roll!");
+
+ add (rolldice);
+ add (picture);
+ add (roll);
+
+    }
+
+    public void actionPerformed (ActionEvent e)
+    {
+ if (e.getActionCommand ().equals ("roll!"));
+ 
+     int n = (int) ((Math.random () * 6) + 1);
+ showStatus ("You rolled a " + n + ".");
+ if (n == 1)
+     picture.setIcon (createImageIcon ("dice1.png"));
+ if (n == 2)
+     picture.setIcon (createImageIcon ("dice2.png"));
+ if (n == 3)
+     picture.setIcon (createImageIcon ("dice3.png"));
+ if (n == 4)
+     picture.setIcon (createImageIcon ("dice4.png"));
+ if (n == 5)
+     picture.setIcon (createImageIcon ("dice5.png"));
+ if (n == 6)
+     picture.setIcon (createImageIcon ("dice6.png"));
+
+    }
+
+
+    
+
+    protected static ImageIcon createImageIcon (String path)
+    {
+ java.net.URL diceURL = dice.class.getResource (path);
+ if (diceURL != null)
+     return new ImageIcon (diceURL);
+ else
+ {
+     System.err.println ("Couldn't find file: " + path);
+     return null;
+ }
+    }
+}
